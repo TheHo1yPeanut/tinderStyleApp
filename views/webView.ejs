@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/webView.css">
+
+
+</head>
+<body>
+    
+    <div id="main" class="displayFlex">
+        <div id="toolbar" class="displayFlex">
+            <button id="profileButton"><img src="res/profile.png" class="buttonImage"></button>
+
+                <div id="spacer"></div>
+
+            <button id="settingsButton">
+                <img src="res/settings.png" class="buttonImage inactiveSettings" id="settingsImage"></img>
+                <div id="settingsBackground" class="hidden"></div>
+            </button>
+        </div>
+
+        <div id="vertSpacer"></div>
+
+        <div id="swiperContainer">
+        </div>
+
+        <div id="footer" class="displayFlex">
+            <button id="noButton"><img src="res/close.png" class="buttonImage"></button>
+
+            <button id="yesButton"><img src="res/dumbbell.png" class="buttonImage"></button>
+        </div>
+
+        <div id="settingsContainer" class="hidden hide displayFlex">
+            <div class="setting displayFlex">
+                <div class="settingName">
+                    <h3>Placeholder</h3>
+                </div>
+
+                <div class="settingOption displayFlex">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                </div>
+            </div>
+            
+            <div class="setting displayFlex">
+                <div class="settingName">
+                    <h3>Placeholder</h3>
+                </div>
+
+                <div class="settingOption displayFlex">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                </div>
+            </div>
+
+            <div class="setting displayFlex">
+                <div class="settingName">
+                    <h3>Placeholder</h3>
+                </div>
+
+                <div class="settingOption displayFlex">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% if (userData) { %>
+        <div id="userData" class="hidden" data-user='<%= JSON.stringify(userData) %>'></div>
+    <% } %>
+
+    <script src="/js/webView.js"></script>
+</body>
+</html>

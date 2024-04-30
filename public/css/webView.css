@@ -1,0 +1,314 @@
+
+
+body{
+    margin: 0;
+
+    overflow: hidden;
+}
+
+#main{
+    height: 100vh;
+    flex-direction: column;
+    background-color: #CFB1B7;
+}
+
+#toolbar{
+   width: 100%;
+   height: 10%;
+   background-color: #83858C; 
+   justify-content: space-around;
+}
+
+#settingsButton{
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+
+    overflow: none;
+
+    background-color: white;
+}
+
+#settingsImage{
+    position: relative;
+    z-index: 5;
+}
+
+.activeSettings{
+    transform: rotate(180deg);
+    transition: transform 1s;
+    z-index: 0;
+}
+
+.inactiveSettings{
+    transform: rotate(-180deg);
+    transition: transform 1s, opacity 1s;
+}
+
+#settingsBackground{
+    position: absolute;
+
+    width: 2vh;
+    aspect-ratio: 1/1;
+
+    right: 5.8vh;
+    top: 3.8vh;
+
+    background-color: white;
+
+    border-radius: 50%;
+
+    transition: transform 1s;
+
+    z-index: 4;
+}
+
+#settingsContainer{
+    position: absolute;
+
+    z-index: 6;
+
+    width: 80%;
+    height: 70vh;
+
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+    top: 10vh;
+
+    transition: opacity 1s;
+
+    flex-direction: column;
+}
+
+.setting{
+    width: 90%;
+    height: 10%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border-bottom: 1px solid black;
+
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.settingName{
+
+}
+
+.settingOption{
+    align-items: center;
+}
+
+.hidden{
+    display: none;
+    
+}
+
+.hide{
+    opacity: 0%;
+}
+
+.backgroundActive{
+    transform: scale(400);
+}
+
+#profileButton{
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+
+    overflow: none;
+}
+
+#spacer{
+    width: 30%;
+}
+
+#vertSpacer{
+    width: 100%;
+    height: 10vh
+}
+
+#swiperContainer{
+    height: 60%;
+    width: 100%;
+
+    transition: opacity 0.5s;
+
+    z-index: 3;
+}
+
+#footer{
+    height: 20%;
+    width: 100%;
+    justify-content: space-evenly;
+
+    transition: opacity 0.3s;
+}
+
+.displayFlex{
+    display: flex;
+}
+
+#noButton{
+    height: 80%;
+    aspect-ratio: 1/1;
+    background-color: #8B80F9;
+    border-radius: 50%;
+
+    border: none;
+}
+
+#yesButton{
+    height: 80%;
+    aspect-ratio: 1/1;
+    background-color: #CFBFF7;
+    border-radius: 50%;
+
+    border: none;
+}
+
+.card{
+    width: 70%;
+    aspect-ratio: 2/3;
+    background-color: black;
+    position: absolute;
+    margin-left: 15%;
+    transform: translateY(calc(5%*var(--i))) scale(calc(1 - var(--i)*0.05));
+    opacity: calc(100% / var(--i)*1.5);
+    z-index: calc(3 - var(--i));
+    overflow: hidden;
+    align-content: center;
+    border-radius: 7%;
+    box-shadow: 0px 0px 150px 15px grey;
+    transition: transform 1s;
+}
+
+.cardName{
+    position: absolute;
+    z-index: calc(4 - var(--i));
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 200%;
+
+    top: 0;
+
+
+    background-color: bisque;
+
+    border: 0;
+    border-radius: 5%;
+}
+
+
+.img{
+    height: 100%;
+    width: 100%;
+}
+
+.buttonImage{
+    height: 70%;
+    aspect-ratio: 1 / 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #CFBFF7;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #8B80F9;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #8B80F9;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+

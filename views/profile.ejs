@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <div id="container">
+
+        <div id="header">
+            <div id="backButtonContainer">
+                <button id="backButton">Back</button>
+            </div>
+
+            <div id="imgnameContainer">
+                <div id="imgSizingContainer">
+                    <div id="imgContainer">
+                        <img id="profilePicture" src="../res/profile.png">
+                    </div>
+                </div>
+
+                <h2 id="nameAge">    <% if (userData) { %>   <%= userData.user %>    <% } %></h2>
+                
+            </div>
+        </div>
+
+        <div id="mainBody">
+
+            <div id="descContainer">
+                <textarea id="descField" maxlength="870"></textarea>
+            </div>
+
+            <div class="optionContainer">
+                <p class="question">Best describe yourself (chose 4)</p>
+
+                <div class="choiceContainer">
+                    <button class="choice c1" id="q1c1">Outgoing</button>
+                    <button class="choice c1" id="q1c2">Introverted</button>
+                    <button class="choice c1" id="q1c3">Love to chat</button>
+                    <button class="choice c1" id="q1c4">Cat person</button>
+                    <button class="choice c1" id="q1c5">Dog person</button>
+                    <button class="choice c1" id="q1c6">Energetic</button>
+                    <button class="choice c1" id="q1c7">Laid back</button>
+                    <button class="choice c1" id="q1c8">Love to train</button>
+                    <button class="choice c1" id="q1c9">Hate to train</button>
+                    <button class="choice c1" id="q1c10">Outside person</button>
+                    <button class="choice c1" id="q1c11">Couch potato</button>
+                    <button class="choice c1" id="q1c12">Book reader</button>
+                </div>
+
+            </div>
+
+            <div class="optionContainer">
+                <p class="question">What do you prefer? (chose 4)</p>
+
+                <div class="choiceContainer">
+                    <button class="choice c2" id="q2c1">Biking</button>
+                    <button class="choice c2" id="q2c2">Swimming</button>
+                    <button class="choice c2" id="q2c3">Cardio</button>
+                    <button class="choice c2" id="q2c4">Running</button>
+                    <button class="choice c2" id="q2c5">Trekking</button>
+                    <button class="choice c2" id="q2c6">Parkour</button>
+                    <button class="choice c2" id="q2c7">Powerlifting</button>
+                    <button class="choice c2" id="q2c8">Yoga</button>
+                    <button class="choice c2" id="q2c9">Calisthenics</button>
+                    
+                </div>
+
+            </div>
+
+            <div class="optionContainer">
+                <p class="question">How would you like to train?</p>
+
+                <div id="singleChoices"> 
+                    <div class="selectChoice">
+                        <select id="select1">
+                            <option value="q3c1">1-2 days / week</option>
+                            <option value="q3c2">3-4 days / week</option>
+                            <option value="q3c3">5-6 days / week</option>
+                            <option value="q3c4">everyday!</option>
+                        </select>
+                    </div>
+    
+                    <div class="selectChoice">
+                        <select id="select2">
+                            <option value="q4c1">30min</option>
+                            <option value="q4c2">1hr</option>
+                            <option value="q4c3">1.5hr</option>
+                            <option value="q4c4">2hr+</option>
+                        </select>
+                    </div>
+                </div>   
+                
+                <div id="submitContainer">
+                    <button id="submit">UPDATE</button>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <% if (userData) { %>
+        <div id="userData" class="hidden" data-user='<%= JSON.stringify(userData) %>'></div>
+    <% } %>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>
